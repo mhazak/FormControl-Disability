@@ -1,0 +1,34 @@
+<form [formGroup]="formGroup" class="container-gap">
+  <input
+    type="text"
+    pInputText
+    [disabled]="true"
+    formControlName="name"
+    placeholder="Name FormControl"
+  />
+  <input
+    type="text"
+    pInputText
+    [disabled]="true"
+    formControlName="surname"
+    placeholder="Surname FormControl"
+  />
+  <div class="buttons-gap">
+    <button pButton (click)="changeNameState()">
+      Change name state (has onlySelf: false)
+    </button>
+    <button pButton (click)="changeSurnameState()" class="p-button-help">
+      Change surname state (has onlySelf: true)
+    </button>
+  </div>
+  <div class="logs">
+    <div class="log">
+      <h4>FormControls ValueChanges</h4>
+      <pre>{{ controlLogs }}</pre>
+    </div>
+    <div class="log">
+      <h4>FormGroup ValueChanges</h4>
+      <pre>{{ groupLogs }}</pre>
+    </div>
+  </div>
+</form>

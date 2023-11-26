@@ -5,6 +5,7 @@ import {
   EMIT_EVENT_PAGE_URL,
   INIFINTY_LOOP_PAGE_URL,
   DISABLED_VALUES_PAGE_URL,
+  ONLY_SELF_PAGE_URL,
 } from 'src/app/app-routing.module';
 
 @Component({
@@ -37,6 +38,10 @@ export class MenuComponent implements OnInit {
         {
           label: 'Disabled values',
           routerLink: DISABLED_VALUES_PAGE_URL,
+        },
+        {
+          label: 'Only self',
+          routerLink: ONLY_SELF_PAGE_URL,
         },
       ],
     },

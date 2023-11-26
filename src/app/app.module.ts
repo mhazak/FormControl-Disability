@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PanelMenuModule } from 'primeng/panelmenu';
@@ -9,6 +9,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
 
 import { InitialCaseComponent } from './components/disability/initial-case/initial-case.component';
 import { ChangeTriggerComponent } from './components/disability/change-trigger/change-trigger.component';
@@ -17,6 +18,7 @@ import { InfinityLoopComponent } from './components/disability/infinity-loop/inf
 import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
 import { DisabledValueComponent } from './components/disability/disabled-value/disabled-value.component';
+import { OnlySelfComponent } from './components/disability/only-self/only-self.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { DisabledValueComponent } from './components/disability/disabled-value/d
     EmitEventComponent,
     InfinityLoopComponent,
     DisabledValueComponent,
+    OnlySelfComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import { DisabledValueComponent } from './components/disability/disabled-value/d
     InputTextModule,
     ButtonModule,
     MessagesModule,
+    RippleModule,
   ],
   providers: [MessageService],
   bootstrap: [AppComponent],
