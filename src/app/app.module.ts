@@ -12,6 +12,7 @@ import { ButtonModule } from 'primeng/button';
 
 import { InitialCaseComponent } from './components/disability/initial-case/initial-case.component';
 import { ChangeTriggerComponent } from './components/disability/change-trigger/change-trigger.component';
+import { EmitEventComponent } from './components/disability/emit-event/emit-event.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ChangeTriggerComponent } from './components/disability/change-trigger/c
     MenuComponent,
     InitialCaseComponent,
     ChangeTriggerComponent,
+    EmitEventComponent,
   ],
   imports: [
     BrowserModule,

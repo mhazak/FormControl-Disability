@@ -1,0 +1,73 @@
+<section class="container-gap">
+  <h4>Emitting events</h4>
+  <form [formGroup]="formGroup">
+    <input
+      type="text"
+      pInputText
+      [disabled]="true"
+      formControlName="name"
+      placeholder="Name FormControl"
+    />
+    <input
+      type="text"
+      pInputText
+      [disabled]="true"
+      formControlName="surname"
+      placeholder="Surname FormControl"
+    />
+  </form>
+
+  <div class="buttons-gap">
+    <button pButton (click)="changeNameState()">Change name state</button>
+    <button pButton (click)="changeSurnameState()" class="p-button-help">
+      Change surname state
+    </button>
+  </div>
+
+  <section class="logs">
+    <div class="name-log log">
+      <h4>Name log</h4>
+      <pre>{{ nameLog }}</pre>
+    </div>
+
+    <div class="surname-log log">
+      <h4>Surname log</h4>
+      <pre>{{ surnameLog }}</pre>
+    </div>
+  </section>
+
+  <h5>Code snippet</h5>
+  <pre>
+    <code>
+      {{
+      "formGroup = new FormGroup({
+        name: new FormControl(''),
+        surname: new FormControl(''),
+      });
+
+      get nameControl() {
+        return this.formGroup.controls.name;
+      }
+
+      get surnameControl() {
+        return this.formGroup.controls.surname;
+      }
+
+      changeNameState() {
+        this.nameControl.disabled
+          ? this.nameControl.enable()
+          : this.nameControl.disable();
+      }
+
+
+      // surname has no event emitter
+      changeSurnameState() {
+        this.surnameControl.disabled
+          ? this.surnameControl.enable({ emitEvent: false })
+          : this.surnameControl.disable({ emitEvent: false });
+      }
+      "
+    }}
+    </code>
+  </pre>
+</section>

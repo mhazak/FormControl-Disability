@@ -1,0 +1,7 @@
+.logs {
+  display: flex;
+}
+
+.log {
+  width: 200px;
+}
