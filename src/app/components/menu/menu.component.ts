@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { INIT_PAGE_URL } from 'src/app/app-routing.module';
 
 @Component({
   selector: 'app-menu',
@@ -15,6 +16,7 @@ export class MenuComponent implements OnInit {
         {
           label: 'Init',
           icon: 'pi pi-fw pi-trash',
+          routerLink: INIT_PAGE_URL,
         },
         {
           label: 'Export',
