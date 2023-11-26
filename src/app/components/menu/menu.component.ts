@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { INIT_PAGE_URL } from 'src/app/app-routing.module';
+import {
+  CHANGE_TRIGGER_PAGE_URL,
+  INIT_PAGE_URL,
+} from 'src/app/app-routing.module';
 
 @Component({
   selector: 'app-menu',
@@ -19,8 +22,9 @@ export class MenuComponent implements OnInit {
           routerLink: INIT_PAGE_URL,
         },
         {
-          label: 'Export',
+          label: 'Change Trigger',
           icon: 'pi pi-fw pi-external-link',
+          routerLink: CHANGE_TRIGGER_PAGE_URL,
         },
       ],
     },

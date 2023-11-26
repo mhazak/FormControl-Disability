@@ -11,9 +11,15 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 
 import { InitialCaseComponent } from './components/disability/initial-case/initial-case.component';
+import { ChangeTriggerComponent } from './components/disability/change-trigger/change-trigger.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, InitialCaseComponent],
+  declarations: [
+    AppComponent,
+    MenuComponent,
+    InitialCaseComponent,
+    ChangeTriggerComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
