@@ -16,6 +16,7 @@ import { EmitEventComponent } from './components/disability/emit-event/emit-even
 import { InfinityLoopComponent } from './components/disability/infinity-loop/infinity-loop.component';
 import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
+import { DisabledValueComponent } from './components/disability/disabled-value/disabled-value.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MessageService } from 'primeng/api';
     ChangeTriggerComponent,
     EmitEventComponent,
     InfinityLoopComponent,
+    DisabledValueComponent,
   ],
   imports: [
     BrowserModule,

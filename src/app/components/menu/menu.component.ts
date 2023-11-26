@@ -4,6 +4,7 @@ import {
   INIT_PAGE_URL,
   EMIT_EVENT_PAGE_URL,
   INIFINTY_LOOP_PAGE_URL,
+  DISABLED_VALUES_PAGE_URL,
 } from 'src/app/app-routing.module';
 
 @Component({
@@ -32,6 +33,10 @@ export class MenuComponent implements OnInit {
         {
           label: 'Infinity loop',
           routerLink: INIFINTY_LOOP_PAGE_URL,
+        },
+        {
+          label: 'Disabled values',
+          routerLink: DISABLED_VALUES_PAGE_URL,
         },
       ],
     },

@@ -1,0 +1,26 @@
+.highlight {
+  max-width: 22em;
+
+  position: relative;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  color: #000;
+  background: #fff;
+  background-clip: padding-box; /* !importanté */
+  border: solid 5px transparent; /* !importanté */
+  border-radius: 1em;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(to right, red, orange);
+  }
+}
