@@ -13,6 +13,9 @@ import { ButtonModule } from 'primeng/button';
 import { InitialCaseComponent } from './components/disability/initial-case/initial-case.component';
 import { ChangeTriggerComponent } from './components/disability/change-trigger/change-trigger.component';
 import { EmitEventComponent } from './components/disability/emit-event/emit-event.component';
+import { InfinityLoopComponent } from './components/disability/infinity-loop/infinity-loop.component';
+import { MessagesModule } from 'primeng/messages';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { EmitEventComponent } from './components/disability/emit-event/emit-even
     InitialCaseComponent,
     ChangeTriggerComponent,
     EmitEventComponent,
+    InfinityLoopComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,8 +35,9 @@ import { EmitEventComponent } from './components/disability/emit-event/emit-even
     PanelMenuModule,
     InputTextModule,
     ButtonModule,
+    MessagesModule,
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

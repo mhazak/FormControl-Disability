@@ -1,0 +1,41 @@
+<section class="container-gap">
+  <h4>Infinity loop example</h4>
+  <span class="error">
+    Warning. Change of each FormControl will cause Infinity loop and throws an
+    error
+  </span>
+
+  <form [formGroup]="formGroup" class="gap-sm">
+    <input
+      type="text"
+      pInputText
+      [disabled]="true"
+      formControlName="name"
+      placeholder="Name FormControl"
+    />
+    <input
+      type="text"
+      pInputText
+      [disabled]="true"
+      formControlName="surname"
+      placeholder="Surname FormControl"
+    />
+  </form>
+
+  <ng-container *ngIf="formGroup.value.username as username">
+    <label>Username is:</label> {{ username }}
+  </ng-container>
+
+  <div class="mt-md">
+    Solution is to add
+    <pre>{{ "{ emitEvent: false; }" }}</pre>
+    into
+    <pre>setValue()</pre>
+    so it should look like:
+    <pre>{{
+      "this.usernameControl.setValue(`${name ? name + '.' : ''}${surname}`,
+        { emitEvent: false; }
+      );"
+    }}</pre>
+  </div>
+</section>
