@@ -7,7 +7,7 @@ export const INIT_PAGE_URL = 'init';
 export const CHANGE_TRIGGER_PAGE_URL = 'change-trigger';
 
 const routes: Routes = [
-  { path: '', redirectTo: INIT_PAGE_URL, pathMatch: 'full' },
+  { path: '', redirectTo: CHANGE_TRIGGER_PAGE_URL, pathMatch: 'full' },
   { path: INIT_PAGE_URL, component: InitialCaseComponent },
   { path: CHANGE_TRIGGER_PAGE_URL, component: ChangeTriggerComponent },
 ];

@@ -1,3 +1,24 @@
-<p>
-  change-trigger works!
-</p>
+<section class="container-gap">
+  <h4>Change trigger</h4>
+  <div class="flex">
+    <form [formGroup]="formGroup" class="container-gap">
+      <input
+        type="text"
+        pInputText
+        [disabled]="true"
+        formControlName="name"
+        placeholder="Name FormControl"
+      />
+      <div class="buttons-gap">
+        <button pButton (click)="enable()">Enable</button>
+        <button pButton (click)="disable()" class="p-button-help">
+          Disable
+        </button>
+      </div>
+    </form>
+    <section class="log">
+      <h4>Status and value change subscription log</h4>
+      <pre>{{ log }}</pre>
+    </section>
+  </div>
+</section>
