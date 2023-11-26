@@ -18,9 +18,11 @@
   </form>
 
   <div class="buttons-gap">
-    <button pButton (click)="changeNameState()">Change name state</button>
+    <button pButton (click)="changeNameState()">
+      Change name state (emitEvent: true)
+    </button>
     <button pButton (click)="changeSurnameState()" class="p-button-help">
-      Change surname state
+      Change surname state (emitEvent: false)
     </button>
   </div>
 
