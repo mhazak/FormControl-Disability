@@ -7,9 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+
+import { InitialCaseComponent } from './components/disability/initial-case/initial-case.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent],
+  declarations: [AppComponent, MenuComponent, InitialCaseComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -17,6 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     PanelMenuModule,
+    InputTextModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

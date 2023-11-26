@@ -1,3 +1,36 @@
-<p>
-  initial-case works!
-</p>
+<section class="container-gap">
+  <h4>Initial case</h4>
+  <form [formGroup]="formGroup">
+    <input
+      type="text"
+      pInputText
+      [disabled]="true"
+      formControlName="name"
+      placeholder="Name FormControl"
+    />
+  </form>
+
+  <div class="buttons-gap">
+    <button pButton (click)="enable()">Enable</button>
+    <button pButton (click)="disable()" class="p-button-help">Disable</button>
+  </div>
+
+  <pre>{{
+    {
+      status: formGroup.controls.name.status,
+      value: formGroup.controls.name.value
+    } | json
+  }}</pre>
+
+  <h5>Code snippet</h5>
+  <pre>
+    <code>
+      {{
+      "formGroup = new FormGroup({
+        name: new FormControl({ value: '', disabled: true }),
+      });
+      "
+    }}
+    </code>
+  </pre>
+</section>
